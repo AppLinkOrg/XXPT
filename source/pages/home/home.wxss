@@ -1,0 +1,117 @@
+.top {
+  background-color: #28d4e7;
+}
+
+page {
+  background-color: #f3f3f3;
+}
+
+.gd {
+  background-color: white;
+}
+
+.null_icon1 {
+  height: 200rpx;
+  width: 240rpx;
+  margin-left: 20rpx;
+}
+
+text {
+  /* 超出的文本内容隐藏 */
+  overflow: hidden;
+  /* 超出显示省略号 */
+  text-overflow: ellipsis;
+  /* 强制不换行 */
+  white-space: nowrap;
+}
+
+.swiper_container {
+  height: 40rpx;
+  width: 80vw;
+}
+
+.swiper_item {
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.ysc {
+  color: #339aee;
+}
+
+.aa {
+  font-weight: bold;
+  color: #f7b81f;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #f7b81f;
+}
+
+.search {
+  margin-right: 20rpx;
+  background-color: white;
+  border: none;
+  border-radius: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.search {
+  border-radius: 25rpx;
+  background-color: white;
+}
+
+.search_icon {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.Mid {
+  height: 150rpx;
+}
+
+.mid1 {
+  background: #f6511d;
+  border-radius: 10rpx;
+}
+
+.mid2 {
+  background: #ffb400;
+  border-radius: 10rpx;
+}
+
+.evaluation {
+  background-color: #2699ec;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.Under {
+  margin-top: 50rpx;
+  border-bottom: 1rpx solid rgb(233, 231, 231);
+}
+
+.phone {
+  border-radius: 10rpx;
+  box-shadow: 1px 1px 7px rgb(231, 228, 228);
+}
+
+.icon {
+  width: 110rpx;
+  height: 180rpx;
+}
+
+.column {
+  align-content: center;
+  flex-direction: column;
+}
+
+.ma-0 {
+  margin-left: 20rpx;
+}
+
+.ma-1 {
+  margin-left: 20rpx;
+}
+
+  
+

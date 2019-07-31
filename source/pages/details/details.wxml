@@ -1,0 +1,113 @@
+<view class='hei'>
+  <!-- 轮播 -->
+  <swiper indicator-dots='true' autoplay='false' interval='3000' duration='500' circular='true' style='width:750rpx;height:700rpx;'>
+    <block wx:for="{{list.images}}" wx:key="k">
+      <swiper-item>
+        <image style='width:750rpx;height:700rpx;' src="{{uploadpath}}product/{{item}}" mode='aspectFill' id="{{item}}"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+  <!-- 商品资料部分 -->
+  <view class=" flex-wrap  gd ">
+    <view class=" flex-row margin-20">
+      <view class="h5 flex-1 txt-black">{{list.name}}</view>
+
+      <navigator url="/pages/jubao/jubao?id={{list.id}}" class="margin-right-10 ">
+
+        <image class='icon-20 margin-left-10 margin-top-5' src='{{uploadpath}}resource/{{res.jubao}}'></image>
+
+
+      </navigator>
+    </view>
+    <view class="margin-top-20 flex-row flex-center">
+      <view class=" flex-row flex-bottom">
+
+        <view class="h5 margin-left-20">手机号码：</view>
+        <view class="h5 margin-left-5 " wx:if="{{memberinfo.identity=='Y'}}" >{{list.mobile}}</view>
+        <view class="h5 txt-primary margin-left-40" wx:if="{{memberinfo.identity=='Y'}}" bindtap='fuzhi'>复制</view>
+      </view>
+
+    </view>
+
+    <view class="margin-top-20 flex-row flex-center">
+      <view class="h5 margin-left-20">用户名：{{list.username}}</view>
+    </view>
+    <view bindtap='tx'>
+      <view wx:if="{{userwx[0]!=null}}" class="margin-20  h5 flex-row">
+        <view class="h5 ">微信号</view>
+        <view class="h5 margin-left-10">:</view>
+        <view class="h5 margin-left-10" wx:if="{{memberinfo.identity=='Y'}}">{{userwx[0].wx}}</view>
+        <view class="h5 txt-primary margin-left-40" wx:if="{{memberinfo.identity=='Y'}}" bindtap='fuzhi'>复制</view>
+      </view>
+    </view>
+
+
+
+    <view class="margin-20  h5" style='150rpx'>{{list.summary}}</view>
+
+    <view class="margin-20  h5" style='150rpx' wx:if="{{memberinfo.identity=='Y'}}">隐藏内容：{{list.hiddencontent}}</view>
+
+  </view>
+
+  <view class="flex-row gd text-center margin-top-5 flex-center ">
+    <view class="flex-2 padding-20 flex-center flex-row">
+      <view>
+        <image class='icon-17 margin-left-10 ' style='margin-top:13rpx ' src='{{uploadpath}}resource/{{res.liulang}}'></image>
+      </view>
+      <view class="margin-left-10">{{list.viewcount}}</view>
+    </view>
+    <view class="flex-2 padding-20 flex-center flex-row">
+
+      <view id='{{list.id}}' class="flex-row" bindtap='fav'>
+        <image class='icon-17 margin-left-10 ' wx:if='{{isfav==0}}' style='margin-top:8rpx ' src='{{uploadpath}}resource/{{res.shoucanggray}}'></image>
+        <image class='icon-17 margin-left-10 ' wx:if='{{isfav>0}}' style='margin-top:8rpx ' src='{{uploadpath}}resource/{{res.	shoucangcolor}}'></image>
+        <view class="margin-left-10  ysc" wx-if='{{isfav>0}}'>{{list.favcount}}</view>
+        <view class="margin-left-10  ysc" wx-if='{{isfav==0}}'>收藏</view>
+      </view>
+
+    </view>
+    <view class="flex-2 padding-20 flex-center flex-row">
+      <view>
+        <image open-type='share' class='icon-17 margin-left-10 ' style='margin-top:13rpx ' src='{{uploadpath}}resource/{{res.fenxian}}'></image>
+      </view>
+      <view open-type='share' class=' text-center '>分享
+        <button open-type='share' class='clear-button' style='width:100rpx;height:100rpx;position:absolute;margin-top:-80rpx;margin-left:-30rpx;'></button>
+      </view>
+    </view>
+    <navigator url='/pages/chatroom/chatroom?member_id={{userlist.id}}&post_id={{list.id}}&product_img={{list.cover}}' class="flex-3 margin-right-20 txt-balck gm" style=''>
+      我要与他聊天
+
+    </navigator>
+  </view>
+
+  <action-sheet hidden="{{passwordInputHidden}}" bindchange="passwordInputHidden">
+    <form bindsubmit="confirm" bindreset="formReset" report-submit="{{true}}">
+      <view class="flex-wrap">
+
+        <view class="margin-20 flex-row ">
+
+          <view class="flex-5 flex-row ">
+            <input placeholder="留言" name="liuyan" bindinput='liuyan' class="dl" cursor-spacing="20" style=' padding:20; margin-left:20rpx;width:100%;margin-top:20rpx' value='{{inputValue}}'></input>
+          </view>
+          <button class="text-center  fabu flex-1" form-type='submit' style=''>发布</button>
+        </view>
+      </view>
+    </form>
+
+  </action-sheet>
+
+  <action-sheet hidden="{{passwordInputHidden1}}" bindchange="passwordInputHidden1">
+    <form bindsubmit="confirm1" bindreset="formReset" report-submit="{{true}}">
+      <view class="flex-wrap">
+        <view class="margin-20 flex-row ">
+          <view class="flex-5 flex-row ">
+            <input placeholder="回复:{{name}}" name="huifu" bindinput='huifu' class="dl" cursor-spacing="20" style=' padding:20; margin-left:20rpx;width:100%;margin-top:20rpx' value='{{inputValue}}'></input>
+          </view>
+          <button class="text-center  fabu flex-1" form-type='submit' style=''>回复</button>
+        </view>
+      </view>
+    </form>
+  </action-sheet>
+
+</view>

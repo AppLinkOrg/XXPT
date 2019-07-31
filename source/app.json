@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/auth/auth",
+    "pages/Leave/Leave",
+    "pages/mywx/mywx",
+    "pages/mycollection/mycollection",
+    "pages/content/content",
+    "pages/delivery/delivery",
+    "pages/aboutus/aboutus",
+    "pages/qiugou/qiugou",
+    "pages/jubao/jubao",
+    "pages/search/search",
+    "pages/wode/wode",
+    "pages/certification/certification",
+    "pages/chatroom/chatroom",
+    "pages/fabu/fabu",
+    "pages/myrelease/myrelease",
+    "pages/index/index",
+    "pages/details/details",
+    "pages/list/list",
+    "pages/release/release",
+    "pages/message/message",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#4ecad6",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#4C556E",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "主页",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icons/a.png",
+        "selectedIconPath": "images/icons/a-1.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/fabu/fabu",
+        "iconPath": "images/icons/b.png",
+        "selectedIconPath": "images/icons/b-1.png"
+      },
+     
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icons/d.png",
+        "selectedIconPath": "images/icons/d-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

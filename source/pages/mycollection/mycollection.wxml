@@ -1,0 +1,38 @@
+<!--pages/mycollection/mycollection.wxml-->
+<view wx:if='{{list.length==0}}' class='flex-row flex-column'>
+  <image class='null_icon padding-40 ' src='{{uploadpath}}resource/{{res.zhaobudao}}'></image>
+  <view class=''>暂无收藏</view>
+</view>
+
+<view class="flex-wrap" style='border:width:100%;margin-left-5 '>
+  <view wx:for="{{list}}" wx:key="k" wx:for-index='idx' class=" margin-20 sc flex-wrap hezi">
+
+    <view class='flex-row flex-center' bindtap='todetails' id='{{item.product_id}}'>
+      <view class=''>
+        <image style='' class='img' mode='aspectFill' src='{{uploadpath}}product/{{item.product_cover}}'></image>
+      </view>
+
+      <view class="bg-white flex-1 margin-left-20 ">
+
+        <view class="margin-10 h4-5 txt-bold">{{item.product_name}}</view>
+
+        <view class="margin-10  flex-row">
+          <view class="flex-1  h4" style='color:#E6232A'>￥{{item.product_price}}</view>
+          <view class="h6 margin-right-15">浏览 {{item.viewcount}}</view>
+        </view>
+
+        <!-- <view class="flex-row flex-center"> -->
+        <!-- <view class="flex" style='width:25%'> -->
+        <view class="margin-10 flex-row">
+          <image class='icon-30 margin-left-10 margin-top-5' src='{{item.fabu_photo0}}'></image>
+          <!-- </view> -->
+          <view class="flex h6 margin-10 txt-black " style='width:38%'>{{item.fabu_name}}</view>
+        </view>
+
+        <view id="{{item.product_id}}" class="flex h6 padding-10 text-center txt-black box" style='border:1px solid black;width:35%' bindtap='quxiao'>取消收藏</view>
+        <!-- </view> -->
+      </view>
+    </view>
+  </view>
+
+</view>

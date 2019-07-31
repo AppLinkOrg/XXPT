@@ -1,0 +1,35 @@
+<!--pages/alert/alert.wxml-->
+<form bindsubmit='confirm'>
+  <view class='border-bottom padding'>
+    请选择举报原因
+  </view>
+  <view class='padding-20 flex-warp'>
+    <radio-group class="radio-group" name="alert_id" bindchange="radioChange">
+  <view class='padding-10'  wx:for="{{alerttype}}">
+  
+  <label class="radio">
+    <radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+  </label>
+  </view>
+</radio-group>
+
+
+  </view>
+ <view class='padding-20  txt-gray'>
+   过程描述
+  </view>
+  <view class='padding-10 h6 txt-gray'>
+   请尽可能详细描述您遇到的问题，并提交后台，平台收到后将尽快处理。
+  </view>
+
+  <view class='padding-20'>
+    <view class=' bg-gray padding-20' style=''>
+      <textarea class='fullimg h6' name="reason" placeholder='多行文本框限200字' maxlength='200'></textarea>
+    </view>
+  </view>
+
+  <view class='padding-20'>
+    <button class="fabu" form-type='submit'>提交</button>
+  </view>
+
+</form>

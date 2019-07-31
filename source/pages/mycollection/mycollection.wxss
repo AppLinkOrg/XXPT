@@ -1,0 +1,30 @@
+.sc {
+  /* height: 628rpx;
+  width: 47%; *//* border-radius: 20rpx; */
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.xm {
+  background-color: #f8f8f8;
+  /* height: 230rpx; */
+}
+
+.img {
+  width: 300rpx;
+  height: 300rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+
+.hezi {
+  box-shadow: 0px 2px 5px 2px rgb(211, 209, 209);
+  margin-bottom: 10rpx;
+}
+
+.box {
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
